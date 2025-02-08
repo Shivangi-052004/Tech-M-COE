@@ -1,0 +1,25 @@
+ public class ElectricCar extends Car {
+	private int batteryrange;
+
+	public ElectricCar(String make, String model, int year,int batteryrange) {
+		super(make, model, year);
+	}
+		public int getbatteryrange() {
+	        return batteryrange;
+	    }
+	    public void setbatteryrange(int batteryrange) {
+	        this.batteryrange = batteryrange;
+	    }
+	    
+	 public void chargebattery() {
+		 System.out.println("the battery is being charged");
+	 }
+	public static void main(String[] args)
+	{
+		 ElectricCar myElectricCar = new ElectricCar("Tesla", "Model S", 2023, 400);
+		 myElectricCar.startEngine();
+	     myElectricCar.chargebattery();
+	}
+ 
+}
+
