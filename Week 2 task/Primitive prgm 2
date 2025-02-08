@@ -1,0 +1,23 @@
+public class EnumDemo {
+    
+    enum DaysOfWeek {
+        SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
+    }
+    
+    public static void checkHoliday(DaysOfWeek day) {
+        switch (day) {
+            case SUNDAY:
+            case SATURDAY:
+                System.out.println(day + " is a Holiday.");
+                break;
+            default:
+                System.out.println(day + " is Not a Holiday.");
+        }
+    }
+    
+    public static void main(String[] args) {
+        for (DaysOfWeek day : DaysOfWeek.values()) {
+            checkHoliday(day);
+        }
+    }
+}
