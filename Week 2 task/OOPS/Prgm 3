@@ -1,0 +1,21 @@
+public class Car {
+	
+	public void startengine() {
+		System.out.println("The engine is started");
+	public class Electriccar extends Car {
+ @Override	
+ public void startengine()
+ {
+	 System.out.println("The method is overridden");
+ }
+ 
+	public static void main(String[] args) {
+		Car[] mycar = { new Car(),new Electriccar()};
+		
+		for(Car car :mycar)
+		{
+			car.startengine();
+		}
+
+}
+}
