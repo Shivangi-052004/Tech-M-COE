@@ -1,0 +1,22 @@
+//Create a class ThreadOne with 3 System.out.println("From ThreadOne!"); in its run method
+Create one separate thread and execute the above thread
+
+
+
+public class SampleThread   {
+	public static void main(String[] args) {
+		STaskThread1 t1 = new STaskThread1 ();
+		t1.start();
+		
+	}
+
+}
+
+public class STaskThread1 extends Thread {
+	public void run() {
+		System.out.println("From thread 1");
+		System.out.println("Thread1 is executed");
+		System.out.println("Tread1 complete");
+	}
+
+}
