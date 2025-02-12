@@ -1,0 +1,29 @@
+//reate a class ThreadRunnableTwo with 3 System.out.println("From ThreadRunnableTwo!"); in its run method
+Create two separate threads and execute the above thread
+
+
+
+
+
+public class SampleThread5 {
+	public static void main(String[] args) {
+	       Runnable2 r1 = new Runnable2();
+	       Runnable2 r2 = new Runnable2();
+	        Thread t1 = new Thread(r1);
+	        Thread t2 = new Thread(r2);
+	        
+	        t1.start();
+	        t2.start();
+	    }
+
+}
+
+
+public class Runnable2 implements Runnable{
+	 public void run() {
+	        System.out.println("From ThreadRunnabletwo!");
+	        System.out.println("From ThreadRunnabletwo!");
+	        System.out.println("From ThreadRunnabletwo!");
+	    }
+
+}
