@@ -1,0 +1,30 @@
+//Create a class ThreadThree with 5 System.out.println("From ThreadThree!");  in its run method
+Create three separate threads and execute the above thread
+
+
+
+public class SampleThread3 {
+	public static void main(String[] args)
+	{
+		STaskThread3 t1 = new STaskThread3 ();
+		STaskThread3 t2 = new STaskThread3 ();
+		STaskThread3 t3 = new STaskThread3();
+		t1.run();
+		t2.run();
+		t3.run();
+		
+	}
+
+}
+
+public class STaskThread3 {
+	public void run() {
+		System.out.println("From thread3");
+		System.out.println("Thread3 is executed");
+		System.out.println("Hi");
+		System.out.println("Hello");
+		System.out.println("Welcome");
+		
+		
+	}
+}
