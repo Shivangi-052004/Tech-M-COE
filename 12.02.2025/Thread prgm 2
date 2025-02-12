@@ -1,0 +1,28 @@
+public class SampleThread2 extends STaskThread2 {
+	public static void main(String[] args)
+	{
+		STaskThread2 t1 = new STaskThread2 ();
+		STaskThread2 t2 = new STaskThread2();
+		t1.run();
+		t2.run();
+		
+	}
+
+}
+
+public class STaskThread2 extends Thread{
+	
+	public void run() {
+	System.out.println("From thread 2");
+	System.out.println("Thread2 is executed");
+	
+	try {
+	System.out.println(10/0);
+	}
+	catch(ArithmeticException e)
+	{
+		System.out.println(e);
+	}
+}
+
+}
