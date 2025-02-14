@@ -5,17 +5,17 @@
 
 <html>
 <body>
-<h2>JavaScript Alert</h2>
+<h2>Address Alert</h2>
 
-<button onclick="alertBox()">Try Alert Box!</button>
+<button onclick="alertBox()">Enter address!</button>
 
 <script>
     function alertBox() {
         let address = prompt("Enter your address:");
         if (address) {
-            alert("Your address is: " + address);
+            alert("You are in " + address);
         } else {
-            alert("No address entered.");
+            alert("Please enter the address.");
         }
     }
     </script>
