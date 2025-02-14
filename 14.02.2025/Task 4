@@ -1,0 +1,25 @@
+//Create an alert to display the address of the user, and get the input from the user for the same
+
+
+<!DOCTYPE html>
+
+<html>
+<body>
+<h2>JavaScript Alert</h2>
+
+<button onclick="alertBox()">Try Alert Box!</button>
+
+<script>
+    function alertBox() {
+        let address = prompt("Enter your address:");
+        if (address) {
+            alert("Your address is: " + address);
+        } else {
+            alert("No address entered.");
+        }
+    }
+    </script>
+    
+
+</body>
+</html>
