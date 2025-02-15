@@ -1,0 +1,13 @@
+//Create a variable as const, check if its a prime
+
+const num = 12;
+let prime = num > 1; 
+
+for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+        prime = false;
+        break;  // Exit the loop as soon as a divisor is found
+    }
+}
+
+console.log(prime ? "Is a prime number" : "Is not a prime number");
