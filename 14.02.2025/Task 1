@@ -1,0 +1,7 @@
+//Create a variable with let, find its cube and display the result
+
+
+let num = prompt("Enter the number:");
+num = Number(num);
+let cube = num ** 3;
+console.log(`The cube of the num is: ${cube}`);
