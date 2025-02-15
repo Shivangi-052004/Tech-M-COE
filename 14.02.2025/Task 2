@@ -1,0 +1,6 @@
+//Create a variable with var, check if its positive or negative and display the result accordingly
+
+
+let num = prompt("Enter the number:");
+let type = (num >= 0) ? "Positive": "Negative" ;
+console.log (`the given number is : ${type}`);
