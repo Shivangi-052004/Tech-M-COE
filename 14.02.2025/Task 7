@@ -1,0 +1,13 @@
+//Check for a number, if its divisible by 12 using if statement
+
+
+var num = prompt("Enter the num:");
+if (num % 7 == 0)
+{
+    console.log("The num is divisible by 7");
+}
+
+else 
+{
+    console.log("he num os not divisible by 7");
+}
