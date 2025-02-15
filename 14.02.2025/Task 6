@@ -1,0 +1,27 @@
+//Create a prompt box , to get the age of the user and display the result
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Prompt to get your age</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let age = prompt("What is your age:", "00");
+  if (age=="null" || age == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello"+ age+ "is your age" ;
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
