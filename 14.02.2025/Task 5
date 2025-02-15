@@ -1,0 +1,28 @@
+//Create a confirmation box , to check if the user will go the film today and display the result
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Are you going to movie or not</h2>
+
+
+<button onclick="pleaseConfirm()">Please confirm your plan!</button>
+
+<p id="para1"></p>
+
+<script>
+function pleaseConfirm() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You are  going to movie!";
+  } else {
+    txt = "You are not going to movie!";
+  }
+  document.getElementById("para1").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
