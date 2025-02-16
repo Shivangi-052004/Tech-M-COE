@@ -1,0 +1,22 @@
+//Get 2 numbers with interval 50. For example 10,60. Display the values from 10 to 60, but skip displaying the multiples of 5
+
+
+let a = prompt("Enter num1: ");
+let b = prompt("Enter num2: ");
+let num1 =Number(a);
+let num2 =Number(b);
+if(num2-num1 == 50)
+{
+  for(let i= num1;i<=num2;i++)
+{
+    if(i%5!==0)
+    {
+        console.log(i);
+    }
+    
+} 
+}
+else
+{
+    console.log("Invalid input");
+}
