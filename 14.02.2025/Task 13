@@ -1,0 +1,19 @@
+//Get 2 numbers. Have the third number as second number + 40. 
+Using while loop, display the multiples of first number from second number to third number. 
+For example , if the numbers are 7, 20, first number is 7, second number is 20 and third number
+is 20+40, which is 60. So, Multiples of 7 should be displayed from 20 to 60, using while loop
+
+
+
+let a = prompt("Enter num1: ");
+let b = prompt("Enter num2: ");
+let num1 = Number(a);
+let num2 = Number(b);
+let num3 = Number(num2 + 20);
+// console.log(`${num3}`);
+for(let i =num2 ;i<=num3;i++)
+{
+    // console.log(i);
+    let multiple = num1 * i ;
+    console.log(`${num1} * ${i} = ${multiple}`);
+}
