@@ -1,0 +1,52 @@
+//Get the day of a week and perform the following using switch statement.
+If its Monday, display "Start of the week!" If its Tuesday, Wednesday or Thursday, 
+display "Mid of the week!". If its Friday, display "Last working day of the week!".
+If its Saturday, display "WeekEnd - Saturday!". If its Sunday, display "WeekEnd - Sunday!". 
+If the input is not a day of the week, display "Invalid input!".
+
+let day =prompt("Enter the day: ");
+switch(day)
+{
+    case "monday":
+        {
+            console.log("start of the week");
+            break;
+        }
+    case "tuesday":
+        {
+            console.log("mid of the week");
+            break;
+        }
+    case "wednesday":
+        {
+            console.log("mid of the week");
+            break;
+        }
+    case "thursday":
+        {
+            console.log("mid of the week");
+            break;
+            
+        }
+    case "friday":
+        {
+            console.log("last working day of the week");
+            break;
+        }
+    case "saturday":
+        {
+            console.log("weekend");
+            break;
+        }
+        
+    case "sunday" :
+        {
+            console.log("weekend");
+            break;
+        }
+    default :
+       {
+           console.log("weekend")
+           break;
+       }
+}
