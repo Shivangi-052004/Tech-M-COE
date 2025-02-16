@@ -11,9 +11,12 @@ let num1 = Number(a);
 let num2 = Number(b);
 let num3 = Number(num2 + 20);
 // console.log(`${num3}`);
-for(let i =num2 ;i<=num3;i++)
+let i =num2;
+while(i<=num3)
 {
     // console.log(i);
     let multiple = num1 * i ;
     console.log(`${num1} * ${i} = ${multiple}`);
+    i++;
 }
+
