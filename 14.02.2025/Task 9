@@ -1,0 +1,23 @@
+//Get the values of year and month. Check if the year is leap year. If yes, check if the month is February. If yes, display "The year is leap year and the month is February with 29 days.". If no, display "The year is leap year and the month is not February ".
+If the year is not leap, display "The given year is not a leap year".
+
+let a = prompt("Enter the year:");
+let b = prompt("Enter the month");
+let year = Number(a);
+let month = Number(b);
+if(year % 4 == 0)
+{
+    if(month == 2)
+    {
+        console.log("It is a leap year and  february month of 29 days");
+    }
+    else
+    {
+        console.log("It is a leap year but not february");
+    }
+}
+
+else
+{
+    console.log("It is not a leap year");
+}
