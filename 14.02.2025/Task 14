@@ -1,0 +1,23 @@
+//Get 2 numbers with interval 30. For example 10,40. Display the values from 10 to 40, and stop displaying if any multiple of 7 comes.
+
+
+
+
+let a = prompt("Enter num1: ");
+let b = prompt("Enter num2: ");
+let num1 =Number(a);
+let num2 =Number(b);
+if(num2-num1 == 30)
+{
+  for(let i= num1;i<=num2;i++)
+{
+    if(i%7!==0)
+    {
+        console.log(i);
+    }
+    else
+    {
+        break;
+    }
+} 
+}
