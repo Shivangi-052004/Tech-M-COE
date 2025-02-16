@@ -1,0 +1,14 @@
+//Get 2 numbers. Display the multiplication table of the first number till second number. For example, if the numbers are 5 and 7, then the table should display from 5*1=5 to 5*7=35
+then,Do the above qn with for loop
+
+
+
+let a = prompt("Enter num1: ");
+let b = prompt("Enter num2: ");
+let num1 = Number(a);
+let num2 = Number(b);
+for(let i =1;i<=num2;i++){
+    let multiple = num1 * i ;
+    //console.log(`${multiple}`);
+    console.log(`${num1} * ${i} = ${multiple} `);
+}
