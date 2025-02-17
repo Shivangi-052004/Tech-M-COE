@@ -1,0 +1,15 @@
+//Without paasing parameters, display the multiplication table with two variables ,
+one variable for the number , and other for the limit.
+
+let x = Number(prompt("Enter num1: "));
+let y = Number(prompt("Enter num2: "));
+
+function multiply (x,i)
+{
+    return x*i ;
+
+}
+for (let i =1;i<=y;i++)
+{
+    console.log(`${x} * ${i} = ${multiply(x,i)}`);
+}
