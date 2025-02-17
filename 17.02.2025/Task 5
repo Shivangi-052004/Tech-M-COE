@@ -1,0 +1,29 @@
+var student={
+    id:"123",
+    name:"Dayaa",
+    dept:"ECE",
+    college:"Panimalar",
+    email:"shivangidayaaece@gmail.com",
+    display:function (){
+    return this.id+" "+this.name+" "+this.email
+}
+}
+function displayStudentDetails() {
+    console.log(student.id + " " + student.name + " " + student.email);
+}
+
+
+var address={
+    doorno:"4/1",
+    street:"Kamaraj Street",
+    area:"Sivathaiyapuram",
+    
+}
+
+function displayStudentWithAddress() {
+    console.log( student.id+ " " +student.name+" "+student.dept+" "+student.college+" "+ address.doorno + " " + address.street + " " + address.area + " " + address.pincode);
+}
+
+delete student.email
+delete student.display
+displayStudentWithAddress()
