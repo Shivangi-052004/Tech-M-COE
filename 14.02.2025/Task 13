@@ -16,7 +16,7 @@ while(i<=num3)
 {
     // console.log(i);
     let multiple = num1 * i ;
-    console.log(`${num1} * ${i} = ${multiple}`);
+    console.log(` ${multiple}`);
     i++;
 }
 
