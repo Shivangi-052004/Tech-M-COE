@@ -1,0 +1,110 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Student {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/database", "root", "Dayaa@123");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Choice: 1.Create 2.Select 3.Update 4.Delete");
+		int ch = sc.nextInt();
+		switch (ch) {
+		case 1: {
+			System.out.println(" create table or insert elements? \n 1.Table 2.Insert");
+			int a = sc.nextInt();
+			if (a == 1) {
+
+				Student.createTable();
+			} else if (a == 2) {
+				Student.insertDetailsWithPreparedStatement(3, "Kiran", "Barineeta", 19);
+			} else
+				System.out.println("Invalid choice!");
+			break;
+
+		}
+		case 2:
+			Student.select(3);
+			break;
+		case 3:
+
+			updateRecordWithPreparedStatement(3, 21);
+			break;
+
+		case 4:
+			deleteRecord();
+			break;
+		}
+		sc.close();
+	}
+
+	public static void createTable() throws SQLException {
+		String query = "CREATE TABLE Studentdetails (" + "Studentid INT PRIMARY KEY, " + "Firstname VARCHAR(50), "
+				+ "Lastname VARCHAR(50), " + "age INT" + ");";
+
+		Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/abcd", "root", "Dayaa@123");
+		Statement st = connect.createStatement();
+		int result = st.executeUpdate(query);
+
+		System.out.println("Table 'Students details' created successfully.");
+		connect.close();
+	}
+
+	public static void insertDetailsWithPreparedStatement(int Studentid, String Firstname, String Lastname, int age)
+			throws SQLException {
+
+		String query = "insert into Studentdetails values(?,?,?,?);";
+		Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/abcd", "root", "Dayaa@123");
+		PreparedStatement pst = connect.prepareStatement(query);
+		pst.setInt(1, Studentid);
+		pst.setString(2, Firstname);
+		pst.setString(3, Lastname);
+		pst.setInt(4, age);
+		System.out.println("Number of rows affected:" + pst.executeUpdate());
+		connect.close();
+
+	}
+
+	public static void select(int Studentid) throws SQLException {
+
+		String query = "select Studentid, Firstname from Studentdetails " + "where Studentid=" + Studentid + ";";
+
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/abcd", "root", "Dayaa@123");
+
+		Statement stmt = connection.createStatement();
+
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next()) {
+			System.out.print("\nId is:" + rs.getInt(1));
+			System.out.print("\nName is:" + rs.getString(2));
+
+		}
+
+		connection.close();
+	}
+
+	public static void updateRecordWithPreparedStatement(int id, int age) throws SQLException {
+
+		String query = "update Studentdetails set age=? where Studentid=?;";
+		Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/abcd", "root", "Dayaa@123");
+		PreparedStatement pst = connect.prepareStatement(query);
+		pst.setInt(1, id);
+		pst.setInt(2, age);
+		System.out.println("Number of rows affected:" + pst.executeUpdate());
+		connect.close();
+	}
+
+	public static void deleteRecord() throws SQLException {
+
+		String query = "delete from Studentdetails where Studentid=3;";
+		Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/abcd", "root", "Dayaa@123");
+		Statement st = connect.createStatement();
+		System.out.println("Number of rows affected:" + st.executeUpdate(query));
+		connect.close();
+	}
+}
