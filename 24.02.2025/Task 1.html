@@ -1,0 +1,36 @@
+<div id = "root1" style="background-color: rgb(7, 193, 255); padding: 20px;"></div>
+<div id = "root2" style="background-color: rgb(76, 203, 246); padding: 20px;"></div>
+<div id = "root3" style="background-color: rgb(171, 228, 247); padding: 20px;"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+const centerStyle = { textAlign: "center" };
+    function Mobile()
+    {
+        return <h2 style={centerStyle}> Mobile Components </h2>
+    }
+    const root1 = ReactDOM.createRoot(document.getElementById('root1'));
+        root1.render(<Mobile />);
+
+    function Mobileeffects()
+    {
+        return <h2 style={centerStyle}> Mobile and its effects </h2>
+    }
+    const root2= ReactDOM.createRoot(document.getElementById('root2'));
+        root2.render(<Mobileeffects />);
+
+    function Mobilepara()
+    {
+        return <p style={centerStyle} >   Mobile phones have become an essential part of modern life, influencing various aspects of communication, work, and daily activities. While they offer convenience, connectivity, and access to vast information, their impact on individuals and society comes with both positive and negative effects.
+
+On the positive side, mobile phones have revolutionized communication, making it instant and accessible from anywhere. They enable seamless connectivity through calls, messages, and social media platforms. Additionally, smartphones serve as powerful tools for education, entertainment, and productivity, providing access to learning resources, navigation, and financial services.
+
+However, excessive mobile phone usage has led to concerns such as addiction, reduced face-to-face interactions, and declining attention spans. The rise of social media and gaming has contributed to screen addiction, affecting mental well-being and productivity. Health issues such as eye strain, sleep disturbances, and posture problems are also linked to prolonged mobile phone usage. Furthermore, distractions caused by smartphones have been a major concern, especially in workplaces and while driving, leading to accidents and inefficiency.
+
+Despite these drawbacks, mobile phones remain indispensable in today’s world. Striking a balance between their benefits and potential harms is crucial for ensuring a healthier and more productive lifestyle. </p>
+    }
+    const root3= ReactDOM.createRoot(document.getElementById('root3'));
+        root3.render(<Mobilepara />);
+
+     
