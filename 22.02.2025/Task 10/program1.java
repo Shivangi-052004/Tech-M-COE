@@ -93,25 +93,25 @@ public class StudentCRUD {
     // Main method to test CRUD operations
     public static void main(String[] args) {
         // CREATE
-        createStudent("John Doe", 20, "john@example.com");
-        createStudent("Jane Smith", 22, "jane@example.com");
+       StudentCRUD. createStudent("John Doe", 20, "john@example.com");
+        StudentCRUD.createStudent("Jane Smith", 22, "jane@example.com");
 
         // READ
         System.out.println("Current Students:");
-        readStudents();
+        StudentCRUD.readStudents();
 
         // UPDATE
-        updateStudent(1, "John Updated", 21, "john_updated@example.com");
+       StudentCRUD. updateStudent(1, "John Updated", 21, "john_updated@example.com");
 
         // READ after update
         System.out.println("Students After Update:");
-        readStudents();
+       StudentCRUD. readStudents();
 
         // DELETE
-        deleteStudent(2);
+        StudentCRUD.deleteStudent(2);
 
         // READ after delete
         System.out.println("Students After Deletion:");
-        readStudents();
+        StudentCRUD.readStudents();
     }
 }
