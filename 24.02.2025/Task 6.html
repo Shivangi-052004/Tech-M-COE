@@ -1,0 +1,36 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+function Java() {
+  return <h2>Java Component1!</h2>;
+}
+
+function Javascript() {
+  return <h2>Javascript Component2!</h2>;
+}
+
+function React() {
+  return <h2>React Component3!</h2>;
+}
+
+function Angular() {
+  return <h2>Angular Component4!</h2>;
+}
+
+function Training() {
+  return (
+    <div>
+      <h1>Topics for Training</h1>
+      <Java />
+      <Javascript />
+      <React />
+      <Angular />
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Training />);
+</script>
