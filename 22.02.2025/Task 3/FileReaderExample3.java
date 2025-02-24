@@ -17,4 +17,13 @@ public class FileReaderExample3 {
             }
         }
     }
+    
+    public static void main(String[] args) {
+        String directoryPath = "C:\\Users\\shiva\\OneDrive\\Documents\New.txt";
+        try {
+            listFiles(directoryPath);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
