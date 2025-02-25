@@ -1,0 +1,97 @@
+//Using if condition
+
+<div id = "root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+
+    function Divisible()
+    {
+        return <h1> Divisible by 13 </h1>
+    }
+
+    function Notdivisible()
+    {
+        return <h1> Not dividible by 13 </h1>
+    }
+
+    function Checknum(props){
+        const isNum = props.num;
+        if(isNum % 13 == 0)
+    {
+        return<Divisible/>;
+
+    }
+       return<Notdivisible/>;
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Checknum num = "65"/>);
+    <script/>
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //  Using && 
+
+    <div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  function Divisible(props) {
+    const IsNum = Number(props.num);
+    return (
+      <div>
+        {IsNum % 13 === 0 && <h2>{props.num} is divisible by 13</h2>}
+        {IsNum % 13 !== 0 && <h3>{props.num} is not divisible by 13</h3>}
+      </div>
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<Divisible num="65" />);
+</script>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Using ternary operator
+
+<div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
+<script type="text/babel">
+  function Divisible() {
+    return <h1>Divisible by 13</h1>;
+  }
+
+  function Notdivisible() {
+    return <h1>Not divisible by 13</h1>;
+  }
+  function CheckNumber(props) {
+    const isNum = Number(props.num);
+    return (
+      <div>
+        <h1>
+          The given number {isNum} is{" "}
+          {isNum % 13 === 0 ? <Divisible /> : <Notdivisible />}
+        </h1>
+      </div>
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<CheckNumber num="90" />);
+</script>
+
