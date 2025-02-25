@@ -1,0 +1,101 @@
+//Using if
+
+<div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  function Multiple() {
+    return <h1>It is an array of length which is a multiple of 3</h1>;
+  }
+
+  function NotAMultiple() {
+    return <h1>It is an array of length which is not a multiple of 3.</h1>;
+  }
+
+  function CheckArr(props) {
+    const arr = props.input;
+    const length = arr.length;
+
+    if (length % 3 === 0) {
+      return <Multiple />;
+    } else {
+      return <NotAMultiple />;
+    }
+  }
+  const input = [3, 4, 24];
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<CheckArr input={input} />);
+</script>
+------------------------------------------------------------------------------------------------------------------
+//Using &&
+<div id="root"></div>
+<!-- React and ReactDOM from unpkg -->
+<script type="module">
+  import React from "https://unpkg.com/react@18/umd/react.development.js";
+  import ReactDOM from "https://unpkg.com/react-dom@18/umd/react-dom.development.js";
+
+  function CheckArray(props) {
+    const arr = props.input;
+    const length = arr.length;
+
+    return (
+      <div>
+        {length % 3 === 0 && (
+          <h2>{arr} is an array of length which is a multiple of 3</h2>
+        )}
+        {length % 3 !== 0 && (
+          <h2>{arr} is an array of length which is not a multiple of 3</h2>
+        )}
+      </div>
+    );
+  }
+
+  const input = [3, 4, 24];
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(React.createElement(CheckArray, { input: input }));
+</script>
+------------------------------------------------------------------------------------------------------------------
+//Using ternary operator
+
+<div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
+<script type="text/babel">
+  function Multiple() {
+    return <h1>It is an array of length which is a multiple of 3</h1>;
+  }
+
+  function NotAMultiple() {
+    return <h1>It is an array of length which is not a multiple of 3.</h1>;
+  }
+  function CheckArray(props) {
+    const Array = props.input;
+    const length = Array.length;
+    return (
+      <div>
+        <h1>
+          The given array length is {length}} is{" "}
+          {length % 3 === 0 ? <Multiple /> : <NotAMultiple />}
+        </h1>
+      </div>
+    );
+  }
+
+  const input = [3, 4, 24];
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<CheckArr input={input} />);
+</script>
