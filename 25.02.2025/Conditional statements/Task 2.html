@@ -1,0 +1,101 @@
+//UUsing if
+
+<div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  function EvenString() {
+    return <h1>It is an even string.</h1>;
+  }
+
+  function OddString() {
+    return <h1>It is an odd string.</h1>;
+  }
+
+  function CheckString(props) {
+    const str = props.input;
+    const length = str.length;
+
+    if (length % 2 == 0) {
+      return <EvenString />;
+    } else {
+      return <OddString />;
+    }
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<CheckString input="Shivangi" />);
+</script>
+------------------------------------------------------------------------------------------------
+//using &&
+<div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  function CheckString(props) {
+    const String = props.input;
+    const length = String.length;
+    {
+      return (
+        <div>
+          {length % 2 == 0 && <h2> The string {String} is a even string </h2>}
+          {length % 2 !== 0 && <h2> The string {String} is a even string </h2>}
+        </div>
+      );
+    }
+  }
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<CheckString input="Shivangi" />);
+</script>
+--------------------------------------------------------------------------------------------------
+//IUsing ternary operator
+
+<div id="root"></div>
+<script
+  src="https://unpkg.com/react@18/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  crossorigin
+></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  function EvenString() {
+    return <h1>It is an even string.</h1>;
+  }
+
+  function OddString() {
+    return <h1>It is an odd string.</h1>;
+  }
+
+  function CheckString(props) {
+    const str = props.input;
+    const length = str.length;
+
+    return (
+      <div>
+        <>{length % 2 === 0 ? <EvenString /> : <OddString />}</>
+      </div>
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<CheckString input="Shivangi" />);
+</script>
+
+
