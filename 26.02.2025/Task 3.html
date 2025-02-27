@@ -1,0 +1,84 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+</style>
+
+<script type="text/babel">
+  function StudentList() {
+    // Sample student data
+    const students = [
+      {
+        id: 1,
+        name: "Shivangi Dayaa",
+        department: "Electronics and Communication Engineering (ECE)",
+      },
+      {
+        id: 2,
+        name: "Rohan Kumar",
+        department: "Computer Science Engineering (CSE)",
+      },
+      {
+        id: 3,
+        name: "Anjali Sharma",
+        department: "Mechanical Engineering (ME)",
+      },
+      {
+        id: 4,
+        name: "Vikram Singh",
+        department: "Electrical Engineering (EE)",
+      },
+      {
+        id: 5,
+        name: "Pavithra R",
+        department: "Information Technology (IT)",
+      },
+    ];
+
+    return (
+      <div>
+        <h2>Student List with Department Details</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            {students.map((student) => (
+              <tr key={student.id}>
+                <td>{student.id}</td>
+                <td>{student.name}</td>
+                <td>{student.department}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  ReactDOM.render(<StudentList />, document.getElementById("root"));
+</script>
