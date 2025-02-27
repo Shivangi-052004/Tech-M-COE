@@ -1,0 +1,64 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+  function EligibilityCheck() {
+    const [hasAadhaar, setHasAadhaar] = React.useState(false);
+    const [hasPAN, setHasPAN] = React.useState(false);
+    const [isChecked, setIsChecked] = React.useState(false);
+
+    function checkEligibility() {
+      setIsChecked(true);
+    }
+
+    return (
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
+        <h2>Government Offer Eligibility</h2>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={hasAadhaar}
+            onChange={() => setHasAadhaar(!hasAadhaar)}
+          />
+          I have an Aadhaar Card
+        </label>
+        <br />
+
+        <label>
+          <input
+            type="checkbox"
+            checked={hasPAN}
+            onChange={() => setHasPAN(!hasPAN)}
+          />
+          I have a PAN Card
+        </label>
+        <br />
+        <br />
+
+        <button onClick={checkEligibility}>Check Eligibility</button>
+        <br />
+        <br />
+
+        {isChecked &&
+          (hasAadhaar || hasPAN ? (
+            <div>
+              <h3 style={{ color: "green" }}>
+                You are eligible for the government offer.
+              </h3>
+              {hasAadhaar && <p>Available Card: Aadhaar Card</p>}
+              {hasPAN && <p>Available Card: PAN Card</p>}
+            </div>
+          ) : (
+            <h3 style={{ color: "red" }}>
+              You are not eligible. Please obtain an Aadhaar or PAN card.
+            </h3>
+          ))}
+      </div>
+    );
+  }
+
+  ReactDOM.render(<EligibilityCheck />, document.getElementById("root"));
+</script>
