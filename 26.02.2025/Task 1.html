@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divisibility Checker</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React & ReactDOM -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      function DivisibilityChecker() {
+        const [num, setNum] = React.useState("");
+        const [result, setResult] = React.useState("");
+
+        const checkDivisibility = () => {
+          const number = parseInt(num);
+          if (!num) return setResult("❌ Please enter a number");
+          setResult(
+            number % 16 === 0
+              ? `✅ ${number} is divisible by 16`
+              : `❌ ${number} is not divisible by 16`
+          );
+        };
+
+        return (
+          <div style={{ textAlign: "center", marginTop: "20px" }}>
+            <h2>Divisibility Checker</h2>
+            <input
+              type="number"
+              value={num}
+              onChange={(e) => setNum(e.target.value)}
+              placeholder="Enter a number"
+            />
+            <button onClick={checkDivisibility}>Check</button>
+            <p>{result}</p>
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <DivisibilityChecker />
+      );
+    </script>
+  </body>
+</html>
