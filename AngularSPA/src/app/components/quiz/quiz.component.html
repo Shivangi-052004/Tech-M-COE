@@ -1,0 +1,25 @@
+<div class="quiz-container" *ngIf="!showResult">
+  <h2>{{ topic }}</h2>
+  <p>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</p>
+  <h3>{{ questions[currentQuestionIndex]?.question }}</h3>
+
+  <div *ngFor="let choice of questions[currentQuestionIndex]?.choices">
+    <input 
+      type="radio" 
+      name="answer" 
+      [value]="choice" 
+      [(ngModel)]="selectedAnswer"> 
+    {{ choice }}
+  </div>
+
+  <button (click)="goToPrevious()" [disabled]="currentQuestionIndex === 0">Previous</button>
+  <button (click)="submitAnswer()" [disabled]="!selectedAnswer">Next</button>
+</div>
+
+<div class="result-container" *ngIf="showResult">
+  <h2>Quiz Completed!</h2>
+  <div class="result-box">
+    Your Score: {{ score }} / {{ questions.length }}
+  </div>
+ 
+</div>

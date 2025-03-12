@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="quiz-box">
+    <h2>Select a Quiz</h2>
+
+    <label for="difficulty">Filter by Difficulty:</label>
+    <select id="difficulty" [(ngModel)]="selectedDifficulty">
+      <option value="All">All</option>
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <ul>
+      <li *ngFor="let quiz of quizzes | filter:selectedDifficulty">
+        <button (click)="startQuiz(quiz.name)">
+          {{ quiz.name }} ({{ quiz.difficulty }})
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

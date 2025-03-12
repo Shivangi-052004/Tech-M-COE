@@ -1,0 +1,44 @@
+header {
+  background: linear-gradient(-45deg, #f3fc03, #f8fdb3, #eded07);
+  background-size: 300% 300%;
+  color: rgb(13, 1, 1);
+  padding: 10px 20px; /* Reduced vertical padding */
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: gradientBG 5s infinite alternate;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Added explicit height */
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+nav h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+/* Adding a cool underline effect on hover */
+nav h1:hover {
+  text-decoration: underline;
+  color: #0d0d0d;
+  transition: color 0.3s ease-in-out;
+}

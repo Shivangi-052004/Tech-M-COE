@@ -1,0 +1,76 @@
+footer {
+  background: linear-gradient(to right, #f3fc03, #434343);
+  background-size: 300% 300%;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -3px 10px rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-links {
+  margin-left: 20px;
+}
+
+.footer-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #ff6600;
+}
+
+.footer-icons {
+  margin-left: 20px;
+}
+
+.footer-icons i {
+  margin: 0 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons i:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+/* Footer Styling */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: yellow;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-top: 4px solid black;
+}
+
+/* Align left and right text */
+.footer .left-text {
+  text-align: left;
+}
+
+.footer .right-text {
+  text-align: right;
+}
